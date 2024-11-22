@@ -11,10 +11,11 @@
   "dependencies": {
     "@tanstack/react-query": "^5.60.2",
     "axios": "^1.7.7",
+    "ethereum-blockies": "^0.1.1",
     "ethers": "^6.13.4",
     "next": "15.0.3",
-    "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-hook-form": "^7.53.2",
     "web3": "^4.15.0"
   },

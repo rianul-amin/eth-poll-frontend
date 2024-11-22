@@ -3,7 +3,7 @@ export default function MetaMaskIcon() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 318.6 318.6"
-      className="w-40 h-40"
+      className="w-8 h-8"
     >
       <path
         fill="#e2761b"

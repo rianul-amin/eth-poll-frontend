@@ -58,23 +58,23 @@ const ActionMenu = ({
         <div
           ref={menuRef}
           style={{ width }}
-          className={`absolute top-full ${position}-0 mt-2 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 p-[2px] rounded-[8px] z-40`}
+          className={`absolute top-full ${position}-0 mt-2 bg-white p-[2px] rounded-[8px] z-40`}
         >
           <div className="bg-white rounded-[6px]">
             {options.map((option, index) => (
               <div
                 key={index}
-                className="px-3 py-2 hover:bg-gray-100 rounded-[8px] hover:rounded-[8px] cursor-pointer"
+                className="px-3 py-2 hover:bg-gray-100 rounded-[8px] cursor-pointer"
               >
                 <button
                   onClick={() => {
                     setIsOpen(false);
                     option.onClick?.();
                   }}
-                  className="flex items-center w-full text-left text-[#292D32] text-[14px] font-[500]"
+                  className="flex items-center w-full text-left text-black text-[12px] font-[500]"
                 >
                   {option.icon && <span className="mr-2">{option.icon}</span>}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 font-semibold">
+                  <span className="font-semibold text-black">
                     {option.label}
                   </span>
                 </button>

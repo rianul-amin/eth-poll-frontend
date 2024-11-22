@@ -1,4 +1,4 @@
-export interface Poll {
+interface Poll {
   title: string;
   description: string;
   options: string[];
@@ -6,4 +6,6 @@ export interface Poll {
   duration: number;
   endTime: number;
   isClosed: boolean;
+  status: string;
+  remainingTime: number;
 }

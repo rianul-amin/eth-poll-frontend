@@ -1,4 +1,4 @@
-export const contractAddress = "0x2bB3f2958db9478D63Ba6da51402C6249541dE30";
+export const contractAddress = "0xF90dF81d6cFFd1469a1F91Ac633F2E40cE56dE99";
 export const contractABI = [
   {
     inputs: [],
@@ -130,32 +130,43 @@ export const contractABI = [
         type: "uint256",
       },
     ],
-    name: "getPollResults",
+    name: "getPollInfo",
     outputs: [
       {
+        internalType: "string",
+        name: "title",
+        type: "string",
+      },
+      {
+        internalType: "string",
+        name: "description",
+        type: "string",
+      },
+      {
         internalType: "string[]",
-        name: "",
+        name: "options",
         type: "string[]",
       },
       {
         internalType: "uint256[]",
-        name: "",
+        name: "votes",
         type: "uint256[]",
       },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [
       {
         internalType: "uint256",
-        name: "pollId",
+        name: "duration",
         type: "uint256",
       },
-    ],
-    name: "getPollStatus",
-    outputs: [
+      {
+        internalType: "uint256",
+        name: "endTime",
+        type: "uint256",
+      },
+      {
+        internalType: "bool",
+        name: "isClosed",
+        type: "bool",
+      },
       {
         internalType: "string",
         name: "status",
@@ -165,6 +176,30 @@ export const contractABI = [
         internalType: "uint256",
         name: "remainingTime",
         type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "user",
+        type: "address",
+      },
+    ],
+    name: "getUserVotingHistory",
+    outputs: [
+      {
+        internalType: "uint256[]",
+        name: "pollIds",
+        type: "uint256[]",
+      },
+      {
+        internalType: "string[]",
+        name: "votedOptions",
+        type: "string[]",
       },
     ],
     stateMutability: "view",
@@ -241,6 +276,30 @@ export const contractABI = [
         internalType: "bool",
         name: "isClosed",
         type: "bool",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    name: "userVotes",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
       },
     ],
     stateMutability: "view",

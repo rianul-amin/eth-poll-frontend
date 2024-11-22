@@ -21,6 +21,14 @@ class WalletService {
   async checkIfAdmin(account: string): Promise<boolean> {
     return await WalletApiInstance.checkIfAdmin(account);
   }
+
+  async getAccountInfo(): Promise<{
+    balance: string | null;
+    balanceInUSD: string | null;
+    priceChange: string | null;
+  }> {
+    return await WalletApiInstance.getAccountInfo();
+  }
 }
 
 const WalletServiceInstance = new WalletService();
